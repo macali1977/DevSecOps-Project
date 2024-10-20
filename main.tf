@@ -8,7 +8,6 @@ resource "aws_s3_bucket" "terraform-august-project1a" {
   bucket = "terraform-august-project1a"
 }
 
-}
 terraform {
   backend "s3" {
     # Replace this with your bucket name!
