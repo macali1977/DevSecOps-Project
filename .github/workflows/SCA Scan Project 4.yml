@@ -35,8 +35,9 @@ jobs:
       with:
         scan-type: 'image'
         scanners: 'vuln'
-        image-ref: docker pull alimac77/dec:matest
+        image-ref: alimac77/dec:matest
         scan-ref: '.'
         hide-progress: false
         format: 'table'
         ignore-unfixed: true
+        
