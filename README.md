@@ -1,42 +1,42 @@
-# DevSecOps Projects Overview........
+# DevSecOps Project Overview........
 
 ## Introduction
-This security document outlines a DevSecOps project implementation incorporating Static Application Security Testing (SAST), Software Composition Analysis (SCA), and Infrastructure as Code (IaC) scanning best practices on applications running within AWS infrastrcuture, utilising GitHub Actions with workflows
+This security document details the implementation of a DevSecOps project that integrates best practices for Static Application Security Testing (SAST), Software Composition Analysis (SCA), and Infrastructure as Code (IaC) scanning. The project focuses on securing applications deployed within AWS infrastructure, leveraging GitHub Actions workflows for automation.
 
 ## Project Goal
-- Implement security measures throughout the software development lifecycle, creating a Secure Software Development Life Cycle (SSDLC).
-- Automate security testing to identify vulnerabilities early in the development process, shifting security left.
-- Integrate security into the CI/CD pipeline for continuous security monitoring.
-- Ensure compliance with security best practices and industry standards.
-- Enable PR blocking for Critical and High Vulnerabilities.
+- Establish and maintain a Secure Software Development Life Cycle (SSDLC) by embedding security practices across all stages of development.
+- Automate security testing to detect vulnerabilities early, promoting a “shift-left” security approach.
+- Integrate robust security controls within the CI/CD pipeline to enable continuous monitoring and protection.
+- Align development processes with industry standards and security best practices to ensure ongoing compliance.
+- Enforce pull request (PR) blocking for critical and high-severity vulnerabilities to prevent insecure code from being merged.
 
 ## Components
 
 ### 1. Infrastructure as Code (IaC) Scanning
-IaC scanning ensures that the infrastructure configuration code adheres to security best practices and compliance standards. It helps in identifying misconfigurations and security loopholes in cloud infrastructure.
+Infrastructure as Code (IaC) scanning ensures that configuration code aligns with security best practices and compliance standards, enabling the early detection of misconfigurations and potential security gaps in cloud environments.
 
 #### Tools:
 
-- **Terraform Compliance**: Assesses Terraform scripts against security policies defined using BDD-style language to ensure compliance.
+- **Terraform Compliance**: Evaluates Terraform scripts against security policies defined in a Behaviour-Driven Development (BDD) style language to ensure compliance with organisational standards.
 
-- **Trivy**: Provides automated IaC scanning to identify security misconfigurations across AWS, Azure, and GCP cloud environments.
+- **Trivy**: Delivers automated Infrastructure as Code (IaC) scanning to detect security misconfigurations across AWS, Azure, and GCP environments.
 
 ### 2. Static Application Security Testing (SAST)
 
-SAST involves analyzing the application's source code or binary code without executing it. This is done to identify security vulnerabilities, coding errors, and other issues in the codebase.
+Static Application Security Testing (SAST) analyses an application's source or binary code without execution, aiming to identify security vulnerabilities, coding flaws, and other issues within the codebase.
 
 #### Tools:
 
-- **CodeQl**: Provides static code analysis to identify bugs, vulnerabilities, and code smells in various programming languages.
+- **CodeQl**: Performs static code analysis to detect bugs, security vulnerabilities, and code smells across multiple programming languages.
 
 ### 3. Software Composition Analysis (SCA)
 
-SCA focuses on identifying and managing open-source components and third-party libraries used in the application. It helps in detecting known vulnerabilities in dependencies.
+Software Composition Analysis (SCA) identifies and manages open-source components and third-party libraries within an application, helping to uncover known vulnerabilities in dependencies.
 #### Tools:
 
-- **Trivy**: Scans project dependencies and identifies vulnerabilities based on the National Vulnerability Database (NVD) and other sources.
+- **Trivy**: Analyses project dependencies to detect vulnerabilities using the National Vulnerability Database (NVD) and other trusted sources.
 
-1. **Integration with CI/CD Pipeline**: Incorporate SAST, SCA, and IaC scanning tools into the CI/CD pipeline to automate security testing.
+1. **Integration with CI/CD Pipeline**: Integrate SAST, SCA, and IaC scanning tools into the CI/CD pipeline to automate and streamline security testing throughout the development lifecycle.
 
 2. **Pre-commit and Post-commit Hooks**: Implement pre-commit hooks to trigger security scans before code is merged into the main branch. Also, execute post-commit hooks to perform additional security checks after code deployment.
 
@@ -48,7 +48,7 @@ SCA focuses on identifying and managing open-source components and third-party l
 
 ## Conclusion
 
-By integrating SAST, SCA, and IaC scanning practices into the DevSecOps pipeline, the project aims to enhance the security posture of the running applications in AWS, reducing vulnerabilities, and ensure compliance throughout the software development lifecycle.
+By embedding SAST, SCA, and IaC scanning practices into the DevSecOps pipeline, the project seeks to strengthen the security posture of applications running in AWS, reduce vulnerabilities, and maintain compliance throughout the software development lifecycle.
 
 # DevSecOps Project Diagram
 
